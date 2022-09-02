@@ -5,7 +5,7 @@ import SwiftUI
 struct NetflixCloneAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }

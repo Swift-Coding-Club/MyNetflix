@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "themoviedatabaseswiftwrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gkye/TheMovieDatabaseSwiftWrapper.git",
+      "state" : {
+        "revision" : "ec8d39c5e37720c002faa4ad9ab4240bb61833af",
+        "version" : "0.7.0"
+      }
+    }
+  ],
+  "version" : 2
+}

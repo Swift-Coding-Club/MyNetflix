@@ -1,59 +1,51 @@
 
 import SwiftUI
+import TMDBSwift
 
 struct ContentView: View {
+    @ObservedObject var viewModel = MovieViewModel()
+    
     var body: some View {
-        ScrollView {
-            NavigationView {
-                Image(systemName: "plus")
-                    .navigationTitle("Netflix")
-            }
-            .frame(width: .infinity, height: 200)
-            
-            MainHeaderView()
-            VStack(alignment: .leading) {
-                Text("지난 1년간 공개된 콘텐츠")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 5)
-                
-                ScrollView(.horizontal) {
-                    HStack{
-                        ForEach(0..<10) { pic in
-                            Rectangle()
-                                .frame(width: 120, height: 180)
+        NavigationView {
+            ZStack {
+                ScrollView {
+                    MainHeaderView()
+                        .onAppear {
+                            viewModel.getTrandigMovies()
                         }
-                        
-                    }
-                }
-                .frame(width: .infinity, height: 180)
-                .foregroundColor(.green)
-            }
-            
-            VStack(alignment: .leading) {
-                Text("지금 뜨는 콘텐츠")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 5)
-                
-                ScrollView(.horizontal) {
-                    HStack{
-                        ForEach(0..<10) { pic in
-                            Rectangle()
-                                .frame(width: 120, height: 180)
+                    
+                    ForEach(0..<5) { section in
+                        VStack(alignment: .leading) {
+                            Text("지난 1년간 공개된 콘텐츠")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 5)
+                            
+                            ScrollView(.horizontal) {
+                                HStack{
+                                    if let movies = viewModel.movies {
+                                        ForEach(movies) { movie in
+                                            
+                                        }
+                                    }
+                                    ForEach(0..<10) { pic in
+                                        Rectangle()
+                                            .frame(width: 120, height: 180)
+                                    }
+                                    
+                                }
+                            }
+                            .frame(height: 180)
+                            .foregroundColor(.green)
                         }
-                        
                     }
+                    
                 }
-                .frame(width: .infinity, height: 180)
-                .foregroundColor(.green)
+                .background(.black)
             }
-            
+            .navigationTitle("Netflix")
         }
-        .background(.black)
-        
     }
 }
 

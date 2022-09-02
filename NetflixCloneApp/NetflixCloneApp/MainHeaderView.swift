@@ -1,18 +1,12 @@
-//
-//  MainHeaderView.swift
-//  NetflixCloneApp
-//
-//  Created by 정명곤 on 2022/09/01.
-//
 
 import SwiftUI
 
 struct MainHeaderView: View {
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Image(systemName: "")
+        ZStack(alignment: .bottom) {
+            Image(systemName: "plus")
                 .resizable()
-                .frame(width: .infinity, height: 600, alignment: .top)
+                .frame(height: 600, alignment: .top)
                 .background(.black)
             HStack(alignment: .center, spacing: 10, content: {
                 
