@@ -1,9 +1,10 @@
 
 import SwiftUI
-import TMDBSwift
+import URLImage
 
-struct ContentView: View {
+struct MainView: View {
     @ObservedObject var viewModel = MovieViewModel()
+    private let sectionTitle = ["몰아보기 추천! 긴장감 넘치는 해외 시리즈", "지금 뜨는 콘텐츠", "넷플릭스 인기 콘텐츠"]
     
     var body: some View {
         NavigationView {
@@ -13,10 +14,12 @@ struct ContentView: View {
                         .onAppear {
                             viewModel.getTrandigMovies()
                         }
+                        
+                        
                     
-                    ForEach(0..<5) { section in
+                    ForEach(sectionTitle.indices) { section in
                         VStack(alignment: .leading) {
-                            Text("지난 1년간 공개된 콘텐츠")
+                            Text(sectionTitle[section])
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
@@ -27,13 +30,22 @@ struct ContentView: View {
                                     if let movies = viewModel.movies {
                                         ForEach(movies) { movie in
                                             
+                                            let url = URL(string:"https://image.tmdb.org/t/p/w500\(movie.poster_path)")
+                                            
+                                            AsyncImage(url: url) { image in
+                                                image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                
+                                            } placeholder: {
+                                                Color.gray
+                                            }
+                                                .frame(width: 120, height: 180)
+                                                
+                                            
+                                            
                                         }
                                     }
-                                    ForEach(0..<10) { pic in
-                                        Rectangle()
-                                            .frame(width: 120, height: 180)
-                                    }
-                                    
                                 }
                             }
                             .frame(height: 180)
@@ -44,13 +56,14 @@ struct ContentView: View {
                 }
                 .background(.black)
             }
-            .navigationTitle("Netflix")
+            .navigationTitle("")
+            .ignoresSafeArea()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

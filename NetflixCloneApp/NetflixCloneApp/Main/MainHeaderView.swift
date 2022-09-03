@@ -4,10 +4,13 @@ import SwiftUI
 struct MainHeaderView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image(systemName: "plus")
+            Image("image")
                 .resizable()
                 .frame(height: 600, alignment: .top)
-                .background(.black)
+                .aspectRatio(0.6, contentMode: .fill)
+                
+                
+                
             HStack(alignment: .center, spacing: 10, content: {
                 
                 VStack(alignment: .center, spacing: -1, content: {
