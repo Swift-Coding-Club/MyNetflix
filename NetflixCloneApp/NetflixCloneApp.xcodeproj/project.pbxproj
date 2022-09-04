@@ -16,6 +16,7 @@
 		C17869FB28C2A3F400C4EFBA /* RecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17869FA28C2A3F400C4EFBA /* RecommendView.swift */; };
 		C17869FD28C2A3FD00C4EFBA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17869FC28C2A3FD00C4EFBA /* SearchView.swift */; };
 		C17869FF28C2A42000C4EFBA /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17869FE28C2A42000C4EFBA /* StoreView.swift */; };
+		C1786A0328C408CF00C4EFBA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1786A0228C408CF00C4EFBA /* API.swift */; };
 		C1F9A25D28BCF09F00E29F77 /* NetflixCloneAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F9A25C28BCF09F00E29F77 /* NetflixCloneAppApp.swift */; };
 		C1F9A25F28BCF09F00E29F77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F9A25E28BCF09F00E29F77 /* MainView.swift */; };
 		C1F9A26128BCF0A400E29F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F9A26028BCF0A400E29F77 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		C17869FA28C2A3F400C4EFBA /* RecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendView.swift; sourceTree = "<group>"; };
 		C17869FC28C2A3FD00C4EFBA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		C17869FE28C2A42000C4EFBA /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		C1786A0228C408CF00C4EFBA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C1F9A25928BCF09F00E29F77 /* NetflixCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F9A25C28BCF09F00E29F77 /* NetflixCloneAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneAppApp.swift; sourceTree = "<group>"; };
 		C1F9A25E28BCF09F00E29F77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		C1786A0128C4087600C4EFBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1786A0228C408CF00C4EFBA /* API.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C1F9A25028BCF09F00E29F77 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		C1F9A25B28BCF09F00E29F77 /* NetflixCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				C1786A0128C4087600C4EFBA /* Resources */,
 				C1786A0028C2A43600C4EFBA /* Main */,
 				C17869F328C2393800C4EFBA /* View */,
 				C17869F228C2392F00C4EFBA /* Model */,
@@ -270,6 +281,7 @@
 				C17869E828C0950C00C4EFBA /* MainHeaderView.swift in Sources */,
 				C17869EA28C0A24D00C4EFBA /* Movie.swift in Sources */,
 				C1F9A25D28BCF09F00E29F77 /* NetflixCloneAppApp.swift in Sources */,
+				C1786A0328C408CF00C4EFBA /* API.swift in Sources */,
 				C17869FD28C2A3FD00C4EFBA /* SearchView.swift in Sources */,
 				C17869EC28C0A3B100C4EFBA /* MainTabView.swift in Sources */,
 				C17869F128C233D700C4EFBA /* MovieViewModel.swift in Sources */,
