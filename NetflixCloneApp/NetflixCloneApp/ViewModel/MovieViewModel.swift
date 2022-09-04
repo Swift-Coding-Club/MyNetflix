@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct Contants {
-    static let API_KEY = "1eb97a2f3b0acf1044d4c836dc254cf7"
+    static let API_KEY = API().apiKey
     static let URL = "https://api.themoviedb.org"
 }
 
