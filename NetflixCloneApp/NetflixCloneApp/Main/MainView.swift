@@ -17,9 +17,9 @@ struct MainView: View {
                         
                         
                     
-                    ForEach(sectionTitle.indices) { section in
+                    ForEach (sectionTitle, id: \.self) { section in
                         VStack(alignment: .leading) {
-                            Text(sectionTitle[section])
+                            Text(section)
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
@@ -30,7 +30,8 @@ struct MainView: View {
                                     if let movies = viewModel.movies {
                                         ForEach(movies) { movie in
                                             
-                                            let url = URL(string:"https://image.tmdb.org/t/p/w500\(movie.poster_path)")
+                                            
+                                            let url = URL(string:"https://image.tmdb.org/t/p/w500\(movie.poster_path!)")
                                             
                                             AsyncImage(url: url) { image in
                                                 image
@@ -41,8 +42,6 @@ struct MainView: View {
                                                 Color.gray
                                             }
                                                 .frame(width: 120, height: 180)
-                                                
-                                            
                                             
                                         }
                                     }
@@ -56,9 +55,9 @@ struct MainView: View {
                 }
                 .background(.black)
             }
-            .navigationTitle("")
-            .ignoresSafeArea()
+            .ignoresSafeArea(.all, edges: .top)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

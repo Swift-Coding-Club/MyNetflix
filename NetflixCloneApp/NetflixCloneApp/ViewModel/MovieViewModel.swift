@@ -1,38 +1,49 @@
 
 import SwiftUI
+import Combine
 
 struct Contants {
-    static let API_KEY = API().apiKey
+    static let API_KEY = Bundle.main.apiKey
     static let URL = "https://api.themoviedb.org"
 }
 
 class MovieViewModel: ObservableObject {
-    @Published var movies: [Movies]?
+    @Published var movies: [Movie]?
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    private var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
     
     func getTrandigMovies() {
-        let url = URL(string: "\(Contants.URL)/3/trending/movie/day?api_key=\(Contants.API_KEY)")
+        guard let url = URL(string: "\(Contants.URL)/3/trending/movie/day?api_key=\(Contants.API_KEY)") else { return }
         
-        URLSession.shared.dataTask(with: url!) { data, response, error in
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            if let data = data {
-                do {
-                    let movie = try JSONDecoder().decode(Movie.self, from: data)
-                    self.movies = movie.results
-                    
-                } catch (let error) {
-                    print(error)
-                    return
+        URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { data, response -> Data in
+                guard let response = response as? HTTPURLResponse, response.statusCode >= 200 && response.statusCode < 300 else {
+                    throw URLError(.badServerResponse)
                 }
-            } else {
-                print("error")
-                return
+                return data
             }
-        }.resume()
-        
+            .decode(type: MovieResults.self, decoder: JSONDecoder())
+            .map{ $0.results! }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    print("finished")
+                case .failure(let error):
+                    print(error)
+                }
+            } receiveValue: { value in
+                self.movies = value
+            }
+            .store(in: &cancellables)
+            
     }
 }
 
