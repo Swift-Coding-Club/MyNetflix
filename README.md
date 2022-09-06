@@ -1,99 +1,60 @@
-<img src="./images/logo.sample.png" alt="Logo of the project" align="right">
 
-# MyNetflix&middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
-> Additional information or tag line
-A brief description of your project, what it is used for.
+![netflix-logo](https://user-images.githubusercontent.com/77499260/188617893-ee5e771e-4646-4fe5-9eb2-4b6de4efc7e1.png){: width="50" height="50"}
 
-## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+# MyNetflix [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm)
+> SwiftUI와 Combine
 
-```shell
-commands here
-```
-
-Here you should say what actually happens when you execute the code above.
 
 ## Developing
+### Architecture Design Pattern
+* MVVM(Model-View-ViewModel)
 
 ### Built With
-List main libraries, frameworks used including versions (React, Angular etc...)
 
-### Prerequisites
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
-
-
-### Setting up Dev
-
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
-```
-
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-give instructions on how to build and release a new version
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy your-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-
-## Versioning
-
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
+##### Framework
+* SwiftUI
+* Combine
+##### Library
+*
 
 
-## Configuration
 
-Here you should write what are all of the configurations a user can enter when using the project.
+## RoadMap
 
-## Tests
+|Week|내용|새로 알게된 내용|
+|---|:---:|:---:|
+|week 1|프로젝트 시작  |-︎|
+|week 2|메인 뷰 및 API 호출|Combime을 통해 API 호출|
+|week 3|||
+|week 4|||
+|week 5|||
+|week 6|||
+|week 7|||
 
-Describe and show how to run the tests with code examples.
-Explain what these tests test and why.
-
-```shell
-Give an example
-```
-
-## Style guide
-
-Explain your code style and show how to check it.
 
 ## Api Reference
 
-If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
+* TMDB : https://www.themoviedb.org/documentation/api
 
 
-## Database
+## Commit Message
 
-Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc... 
 
-## Licensing
+🪛[chore]: 코드 수정, 내부 파일 수정. </br>
+✨[feat]: 새로운 기능 구현. </br>
+🎨[style]: 스타일 관련 기능.(코드의 구조/형태 개선) </br>
+➕[add]: Feat 이외의 부수적인 코드 추가, 라이브러리 추가 </br>
+🔧[file]: 새로운 파일 생성, 삭제 시 </br>
+🐛[fix]: 버그, 오류 해결. </br>
+🔥[del]: 쓸모없는 코드/파일 삭제. </br>
+📝[docs]: README나 WIKI 등의 문서 개정. </br>
+💄[mod]: storyboard 파일,UI 수정한 경우. </br>
+✏️[correct]: 주로 문법의 오류나 타입의 변경, 이름 변경 등에 사용합니다. </br>
+🚚[move]: 프로젝트 내 파일이나 코드(리소스)의 이동. </br>
+⏪️[rename]: 파일 이름 변경이 있을 때 사용합니다. </br>
+⚡️[improve]: 향상이 있을 때 사용합니다. </br>
+♻️[refactor]: 전면 수정이 있을 때 사용합니다. </br>
+🔀[merge]: 다른브렌치를 merge 할 때 사용합니다. </br>
+✅ [test]: 테스트 코드를 작성할 때 사용합니다. </br>
 
-State what the license is and how to find the text version of the license.
