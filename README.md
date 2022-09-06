@@ -1,9 +1,9 @@
-
-![netflix-logo](https://user-images.githubusercontent.com/77499260/188617893-ee5e771e-4646-4fe5-9eb2-4b6de4efc7e1.png){: width="50" height="50"}
-
+<div align = "left"><img src="https://user-images.githubusercontent.com/77499260/188617893-ee5e771e-4646-4fe5-9eb2-4b6de4efc7e1.png" width="80" height="80"></div>
 
 # MyNetflix [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm)
-> SwiftUI와 Combine
+
+
+> SwiftUI와 Combine을 공부하기 위한 Nexflix Clone App
 
 
 ## Developing
