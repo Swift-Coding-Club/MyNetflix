@@ -12,12 +12,10 @@ struct MainView: View {
                 ScrollView {
                     MainHeaderView()
                         .onAppear {
-                            viewModel.getTrandigMovies()
+                            viewModel.getTrendigContents(media_type: Media.movie)
                         }
                         
-                        
-                    
-                    ForEach (sectionTitle, id: \.self) { section in
+                    ForEach(sectionTitle, id: \.self) { section in
                         VStack(alignment: .leading) {
                             Text(section)
                                 .font(.headline)
@@ -27,21 +25,13 @@ struct MainView: View {
                             
                             ScrollView(.horizontal) {
                                 HStack{
-                                    if let movies = viewModel.movies {
-                                        ForEach(movies) { movie in
+                                    if let contents = viewModel.contents {
+                                        ForEach(contents) { content in
                                             
                                             
-                                            let url = URL(string:"https://image.tmdb.org/t/p/w500\(movie.poster_path!)")
                                             
-                                            AsyncImage(url: url) { image in
-                                                image
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fill)
-                                                
-                                            } placeholder: {
-                                                Color.gray
-                                            }
-                                                .frame(width: 120, height: 180)
+                                            
+                                            
                                             
                                         }
                                     }
@@ -51,6 +41,7 @@ struct MainView: View {
                             .foregroundColor(.green)
                         }
                     }
+                    
                     
                 }
                 .background(.black)

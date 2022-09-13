@@ -1,9 +1,9 @@
 import SwiftUI
 
 
-struct MovieResults: Decodable {
+struct ContentsResults: Decodable {
     let page: Int?
-    let results: [Movie]?
+    let results: [Contents]?
     
     enum CodingKeys: String, CodingKey {
         case page = "page"
@@ -17,7 +17,7 @@ struct MovieResults: Decodable {
     }
 }
 
-struct Movie: Identifiable, Decodable {
+struct Contents: Identifiable, Decodable {
     let id: Int?
     let title: String?
     let overview: String?
