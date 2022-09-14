@@ -13,7 +13,7 @@ struct ContentsResults: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         page = try values.decodeIfPresent(Int.self, forKey: .page)
-        results = try values.decodeIfPresent([Movie].self, forKey: .results)
+        results = try values.decodeIfPresent([Contents].self, forKey: .results)
     }
 }
 

@@ -21,7 +21,7 @@
 
 ## RoadMap
 
-|Week|내용|새로 알게된 내용|
+|Week|내용|note|
 |---|:---:|:---:|
 |week 1|프로젝트 시작  |-︎|
 |week 2|메인 뷰 및 API 호출|Combime을 통해 API 호출|

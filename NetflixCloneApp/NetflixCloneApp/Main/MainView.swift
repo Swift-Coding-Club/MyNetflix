@@ -1,6 +1,5 @@
 
 import SwiftUI
-import URLImage
 
 struct MainView: View {
     @ObservedObject var viewModel = MovieViewModel()
@@ -8,40 +7,13 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                ScrollView {
+            ZStack(alignment: .center) {
+                ScrollView() {
                     MainHeaderView()
-                        .onAppear {
-                            viewModel.getTrendigContents(media_type: Media.movie)
-                        }
                         
-                    ForEach(sectionTitle, id: \.self) { section in
-                        VStack(alignment: .leading) {
-                            Text(section)
-                                .font(.headline)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 5)
-                            
-                            ScrollView(.horizontal) {
-                                HStack{
-                                    if let contents = viewModel.contents {
-                                        ForEach(contents) { content in
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                        }
-                                    }
-                                }
-                            }
-                            .frame(height: 180)
-                            .foregroundColor(.green)
-                        }
+                    ForEach(sectionTitle, id:\.self) { section in
+                        ThumbnailsVIew(section)
                     }
-                    
                     
                 }
                 .background(.black)
