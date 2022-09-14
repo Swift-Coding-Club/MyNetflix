@@ -1,6 +1,5 @@
 
 import SwiftUI
-import URLImage
 
 struct MainView: View {
     @ObservedObject var viewModel = MovieViewModel()
@@ -8,57 +7,20 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                ScrollView {
+            ZStack(alignment: .center) {
+                ScrollView() {
                     MainHeaderView()
-                        .onAppear {
-                            viewModel.getTrandigMovies()
-                        }
                         
-                        
-                    
-                    ForEach(sectionTitle.indices) { section in
-                        VStack(alignment: .leading) {
-                            Text(sectionTitle[section])
-                                .font(.headline)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 5)
-                            
-                            ScrollView(.horizontal) {
-                                HStack{
-                                    if let movies = viewModel.movies {
-                                        ForEach(movies) { movie in
-                                            
-                                            let url = URL(string:"https://image.tmdb.org/t/p/w500\(movie.poster_path)")
-                                            
-                                            AsyncImage(url: url) { image in
-                                                image
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fill)
-                                                
-                                            } placeholder: {
-                                                Color.gray
-                                            }
-                                                .frame(width: 120, height: 180)
-                                                
-                                            
-                                            
-                                        }
-                                    }
-                                }
-                            }
-                            .frame(height: 180)
-                            .foregroundColor(.green)
-                        }
+                    ForEach(sectionTitle, id:\.self) { section in
+                        ThumbnailsVIew(section)
                     }
                     
                 }
                 .background(.black)
             }
-            .navigationTitle("")
-            .ignoresSafeArea()
+            .ignoresSafeArea(.all, edges: .top)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

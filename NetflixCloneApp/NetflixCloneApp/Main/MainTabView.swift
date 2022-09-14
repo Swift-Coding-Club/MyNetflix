@@ -3,6 +3,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @State private var selectedIndex = 0
+    
     var body: some View {
         TabView(selection: $selectedIndex) {
             
@@ -26,15 +27,6 @@ struct MainTabView: View {
                 }
                 .tag(0)
             
-            SearchView()
-                .onTapGesture {
-                    self.selectedIndex = 0
-                }
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("검색")
-                }
-                .tag(0)
             
             StoreView()
                 .onTapGesture {
