@@ -5,6 +5,7 @@
 
 > SwiftUI와 Combine을 공부하기 위한 Nexflix Clone App
 
+
 ## Developing
 ### Architecture Design Pattern
 * MVVM(Model-View-ViewModel)
@@ -21,7 +22,7 @@
 
 ## RoadMap
 
-|Week|내용|note|
+|Week|내용|새로 알게된 내용|
 |---|:---:|:---:|
 |week 1|프로젝트 시작  |-︎|
 |week 2|메인 뷰 및 API 호출|Combime을 통해 API 호출|
@@ -56,3 +57,4 @@
 ♻️[refactor]: 전면 수정이 있을 때 사용합니다. </br>
 🔀[merge]: 다른브렌치를 merge 할 때 사용합니다. </br>
 ✅ [test]: 테스트 코드를 작성할 때 사용합니다. </br>
+
