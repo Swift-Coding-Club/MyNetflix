@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-NetflixCloneApp/Pods-NetflixCloneApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI/SDWebImageSwiftUI.framework
 ${BUILT_PRODUCTS_DIR}/TMDBSwift/TMDBSwift.framework

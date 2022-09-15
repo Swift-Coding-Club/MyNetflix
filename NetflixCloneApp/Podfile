@@ -6,6 +6,7 @@ target 'NetflixCloneApp' do
   use_frameworks!
 
   # Pods for NetflixCloneApp
+  pod "SDWebImageSwiftUI"
   pod "TMDBSwift"
 
 end

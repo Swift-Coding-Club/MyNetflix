@@ -19,9 +19,11 @@ struct ContentsResults: Decodable {
 
 struct Contents: Identifiable, Decodable {
     let id: Int?
+    let backdrop_path: String?
     let title: String?
     let overview: String?
     let poster_path: String?
     let popularity: Float?
+    let release_date: String?
     
 }

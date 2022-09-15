@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import SDWebImage
 
 struct ThumbnailsVIew: View {
-    @ObservedObject var viewModel: MovieViewModel = MovieViewModel()
-    private var sectionTitle: String
+    @State private var isPresented = false
+    @ObservedObject var viewModel = MovieViewModel()
     
-    init(_ title: String) {
+    private var sectionTitle: String
+    private var contents: [Contents]? = [Contents]()
+    
+    init(_ title: String, _ section: Int) {
         self.sectionTitle = title
+        
     }
+    
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,16 +28,24 @@ struct ThumbnailsVIew: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.horizontal, 5)
+                
             
             ScrollView(.horizontal) {
                 HStack{
-                    ForEach(0..<7) { content in
-                        Image("image")
-                            .frame(width: 120, height: 180, alignment: .center)
-                            .background(.gray)
-                            .cornerRadius(9)
-                            .aspectRatio(0.01, contentMode: .fill)
-                        
+                    ForEach(0..<3) { content in
+                        Group {
+                            Button {
+                                self.isPresented = true
+                            } label: {
+                                Image("image")
+                                    .resizable()
+                                    .frame(width: 120)
+                            }
+                            .sheet(isPresented: self.$isPresented) {
+                                DetailView(["A"])
+                            }
+                            
+                        }
                     }
                 }
                 
@@ -39,13 +53,12 @@ struct ThumbnailsVIew: View {
         }
         .frame(height: 220)
         .background(.black)
-        .onAppear{ viewModel.getUpcomingContents() }
     }
 }
 
 
 struct ThumbnailsVIew_Previews: PreviewProvider {
     static var previews: some View {
-        ThumbnailsVIew("Section")
+        ThumbnailsVIew("Section", 0)
     }
 }

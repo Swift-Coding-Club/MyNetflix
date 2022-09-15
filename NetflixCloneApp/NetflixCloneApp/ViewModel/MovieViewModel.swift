@@ -1,6 +1,8 @@
 
 import SwiftUI
 import Combine
+import SDWebImage
+import SDWebImageSwiftUI
 
 struct API {
     static let API_KEY = Bundle.main.apiKey
@@ -19,12 +21,12 @@ enum NetworError: Error {
 
 class MovieViewModel: ObservableObject {
     @Published var contents: [Contents]?
-    @Published var thumnail: UIImage?
+    @Published private var thumnail: UIImage?
     
     private var cancellables = Set<AnyCancellable>()
     
-    func getTrendigContents(media_type: String) {
-        guard let url = URL(string: "\(API.URL)/3/trending/\(media_type)/day?api_key=\(API.API_KEY)") else { return }
+    func getTrendigContents() {
+        guard let url = URL(string: "\(API.URL)/3/trending/movie/day?api_key=\(API.API_KEY)") else { return }
         
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { data, response -> Data in
@@ -77,41 +79,6 @@ class MovieViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
-//    func fecthData(_ section: Int) {
-//        switch(section) {
-//        case Sections.TrendingMovie.rawValue:
-//        case Sections.TrendingTv.rawValue:
-//        case Sections.Upcoming.rawValue:
-//        default: return
-//        }
-//    }
-    
-//    func renderingImage(poster_path: String) {
-//        let url = URL(string:"https://image.tmdb.org/t/p/w500\(poster_path)")
-//
-//        return URLSession.shared.dataTaskPublisher(for: url!)
-//            .map { UIImage(data: $0.data) }
-//            .receive(on: DispatchQueue.main)
-//            .mapError{ $0 as Error }
-//            .eraseToAnyPublisher()
-//            .sink { result in
-//                switch result {
-//                case .failure(let error):
-//                    print(error)
-//                case .finished:
-//                    print("success")
-//                }
-//            } receiveValue: { [weak self] data in
-//                DispatchQueue.main.async {
-//                    self?.thumnail = UIImage(data: data)
-//                }
-//            }
-//            .store(in: &cancellables)
-//    }
-        
-        
-        
     
     
 }

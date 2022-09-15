@@ -3,6 +3,8 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var viewModel = MovieViewModel()
+    
+    
     private let sectionTitle = ["몰아보기 추천! 긴장감 넘치는 해외 시리즈", "지금 뜨는 콘텐츠", "넷플릭스 인기 콘텐츠"]
     
     var body: some View {
@@ -11,9 +13,8 @@ struct MainView: View {
                 ScrollView() {
                     MainHeaderView()
                         
-                    ForEach(sectionTitle, id:\.self) { section in
-                        ThumbnailsVIew(section)
-                    }
+                    ThumbnailsVIew("section", 0)
+                    
                     
                 }
                 .background(.black)
@@ -21,6 +22,7 @@ struct MainView: View {
             .ignoresSafeArea(.all, edges: .top)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .background(.black)
     }
 }
 

@@ -27,9 +27,9 @@
             filePath = "NetflixCloneApp/ViewModel/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getTrendigContents(media_type:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getTrendigContents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -43,9 +43,9 @@
             filePath = "NetflixCloneApp/ViewModel/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "getTrendigContents(media_type:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getTrendigContents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -59,9 +59,9 @@
             filePath = "NetflixCloneApp/ViewModel/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "getTrendigContents(media_type:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getTrendigContents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -75,9 +75,9 @@
             filePath = "NetflixCloneApp/ViewModel/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "getTrendigContents(media_type:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "getTrendigContents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -123,8 +123,8 @@
             filePath = "NetflixCloneApp/Main/MainView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -139,8 +139,8 @@
             filePath = "NetflixCloneApp/Main/MainView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
