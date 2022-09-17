@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		59814AB850FBDA6D727AD2DA /* Pods_NetflixCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501F4B9AB8AA132693F4199F /* Pods_NetflixCloneApp.framework */; };
-		C1209EBF28D1796900DEDCFD /* ThumbnailsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1209EBE28D1796900DEDCFD /* ThumbnailsVIew.swift */; };
 		C1209EC228D1EC8D00DEDCFD /* API.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1209EC128D1EC8D00DEDCFD /* API.plist */; };
 		C17869E828C0950C00C4EFBA /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17869E728C0950C00C4EFBA /* MainHeaderView.swift */; };
 		C17869EA28C0A24D00C4EFBA /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17869E928C0A24D00C4EFBA /* Contents.swift */; };
@@ -32,7 +31,6 @@
 		501F4B9AB8AA132693F4199F /* Pods_NetflixCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5966523523CB42FF853DBF00 /* Pods-NetflixCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-NetflixCloneApp/Pods-NetflixCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AD975C9F232C3BD333327CBB /* Pods-NetflixCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixCloneApp.release.xcconfig"; path = "Target Support Files/Pods-NetflixCloneApp/Pods-NetflixCloneApp.release.xcconfig"; sourceTree = "<group>"; };
-		C1209EBE28D1796900DEDCFD /* ThumbnailsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailsVIew.swift; sourceTree = "<group>"; };
 		C1209EC128D1EC8D00DEDCFD /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API.plist; sourceTree = "<group>"; };
 		C17869E728C0950C00C4EFBA /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		C17869E928C0A24D00C4EFBA /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				C17869EB28C0A3B100C4EFBA /* MainTabView.swift */,
 				C17869E728C0950C00C4EFBA /* MainHeaderView.swift */,
 				C1F9A25E28BCF09F00E29F77 /* MainView.swift */,
-				C1209EBE28D1796900DEDCFD /* ThumbnailsVIew.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -293,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1209EBF28D1796900DEDCFD /* ThumbnailsVIew.swift in Sources */,
 				C1F9A25F28BCF09F00E29F77 /* MainView.swift in Sources */,
 				C1CA705728D2AAF40007EAE5 /* ImageLoader.swift in Sources */,
 				C17869E828C0950C00C4EFBA /* MainHeaderView.swift in Sources */,

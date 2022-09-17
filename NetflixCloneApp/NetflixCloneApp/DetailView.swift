@@ -9,21 +9,26 @@ import SwiftUI
 
 
 struct DetailView: View {
-    private var info: [String]
+    private var info: Contents
     
-    init(_ info: [String]) {
+    init(_ info: Contents) {
         self.info = info
     }
     
     var body: some View {
         ZStack {
-            
             VStack(alignment: .leading) {
                 ZStack(alignment: .topTrailing) {
-                    Image("image")
-                        .resizable()
-                        .frame(width: 378, height: 200, alignment: .center)
-                        .aspectRatio(0.1, contentMode: .fit)
+                    
+                    AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(info.backdrop_path!)")) { image in
+                        image.resizable()
+                            .frame(width: 378, height: 180, alignment: .center)
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        Rectangle()
+                            .frame(width: 378, height: 180, alignment: .center)
+                            .foregroundColor(.gray)
+                    }
                     HStack {
                         ZStack {
                             Circle()
@@ -49,14 +54,15 @@ struct DetailView: View {
                         }
                     }
                     .padding(.top, 10)
-                    
                 }
+                
+                
                 ZStack(alignment: .topLeading) {
                     ScrollView() {
                         VStack(alignment: .leading) {
-                            Text(info[0])
+                            Text(info.title!)
                                 .foregroundColor(.white)
-                                
+                            
                             HStack {
                                 Text("New")
                                     .foregroundColor(.green)
@@ -116,7 +122,7 @@ struct DetailView: View {
                             }
                             
                             VStack(alignment: .leading) {
-                                Text("this is contents")
+                                Text(info.overview!)
                                     .foregroundColor(.white)
                                     .font(.headline)
                                 
@@ -132,16 +138,15 @@ struct DetailView: View {
                     
                 }
             }
+            .ignoresSafeArea(.all)
+            .background(.black)
         }
-        .ignoresSafeArea(.all)
-        .background(.black)
-        
     }
-        
 }
+
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(["a"])
+        DetailView(Contents(id: 1, backdrop_path: "/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg", title: "Thor: Love and Thunder", original_language: "en", original_title: "title", overview: "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.", poster_path: "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg", media_type: "movie", popularity: 1.23, release_date: "", vote_average: 1.23))
     }
 }

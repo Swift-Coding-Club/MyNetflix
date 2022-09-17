@@ -36,7 +36,7 @@ class MovieViewModel: ObservableObject {
                 return data
             }
             .decode(type: ContentsResults.self, decoder: JSONDecoder())
-            .map{ $0.results! }
+            .map{ $0.results!; }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
             .sink { completion in
@@ -50,6 +50,8 @@ class MovieViewModel: ObservableObject {
                 self.contents = contents
             }
             .store(in: &cancellables)
+        
+        print(contents)
             
     }
     

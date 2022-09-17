@@ -21,9 +21,12 @@ struct Contents: Identifiable, Decodable {
     let id: Int?
     let backdrop_path: String?
     let title: String?
+    let original_language: String?
+    let original_title: String?
     let overview: String?
     let poster_path: String?
+    let media_type: String?
     let popularity: Float?
     let release_date: String?
-    
+    let vote_average: Float?
 }
