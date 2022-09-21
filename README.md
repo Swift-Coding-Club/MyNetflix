@@ -22,11 +22,11 @@
 
 ## RoadMap
 
-|Week|내용|새로 알게된 내용|
+|Week|내용|참고|
 |---|:---:|:---:|
 |week 1|프로젝트 시작  |-︎|
 |week 2|메인 뷰 및 API 호출|Combime을 통해 API 호출|
-|week 3|||
+|week 3|DetailView 개발 및 데이터 전달||
 |week 4|||
 |week 5|||
 |week 6|||
@@ -57,4 +57,8 @@
 ♻️[refactor]: 전면 수정이 있을 때 사용합니다. </br>
 🔀[merge]: 다른브렌치를 merge 할 때 사용합니다. </br>
 ✅ [test]: 테스트 코드를 작성할 때 사용합니다. </br>
+
+## 문제 및 해결 전략
+
+
 
