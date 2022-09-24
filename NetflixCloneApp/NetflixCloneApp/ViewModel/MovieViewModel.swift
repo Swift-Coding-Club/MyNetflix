@@ -21,7 +21,6 @@ enum NetworError: Error {
 
 class MovieViewModel: ObservableObject {
     @Published var contents: [Contents]?
-    @Published private var thumnail: UIImage?
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -51,7 +50,6 @@ class MovieViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
-        print(contents)
             
     }
     

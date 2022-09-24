@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct DetailView: View {
+    @State var selectedTab: DetailViewModel = .
     private var info: Contents
     
     init(_ info: Contents) {

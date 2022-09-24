@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+enum DetailViewModel: Int, CaseIterable {
+
+    case Round = 
+    case
+    
+}
